@@ -1,0 +1,75 @@
+/* =========================
+   GLOBAL
+   ========================= */
+body {
+    margin: 0;
+    background-color: #FFFDF6; /* palette utama */
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #2F2F2F;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.header-bar {
+    height: 70px;
+    background: #FAF6E9; /* palette header */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 15px;
+    border-bottom: 1px solid #E6E1CF;
+    font-weight: 500;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+table {
+    font-size: 13px;
+    border-radius: 8px;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+th, td {
+    padding: 8px !important;
+    /*vertical-align: middle;*/
+    border-bottom: 1px solid #E6E1CF;
+}
+
+table thead {
+    background: #DDEB9D; /* palette aksen */
+    font-weight: 600;
+}
+
+table tbody tr:hover {
+    background: #FAF6E9;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+.btn {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+.btn-primary {
+    background-color: #A0C878;
+    border-color: #A0C878;
+}
+
+.btn-primary:hover {
+    background-color: #8DBB67;
+    border-color: #8DBB67;
+}
+
