@@ -299,7 +299,8 @@
                     <th width="15%">Tanggal</th>
                     <th width="35%">Keterangan</th>
                     <th width="20%">Sumber Dana</th>
-                    <th width="25%" class="text-end">Jumlah (Rp)</th>
+                    <th width="25%" class="text-end">Jumlah</th>
+                    <th width="15%" class="text-center no-print">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -320,12 +321,17 @@
                             </span>
                         </td>
                         <td class="text-end amount-text">
-                            {{ number_format($item->jumlah, 0, ',', '.') }}
+                            Rp. {{ number_format($item->jumlah, 0, ',', '.') }}
+                        </td>
+                        <td class="text-center no-print">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-eye">Detail</i>
+                            </button>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" class="empty-state">
+                        <td colspan="6" class="empty-state">
                             <i class="bi bi-inbox"></i>
                             <p class="mb-0">Tidak ada data dana masuk untuk periode ini</p>
                         </td>
@@ -340,7 +346,7 @@
                         TOTAL DANA MASUK
                     </td>
                     <td class="text-end">
-                        {{ number_format($total, 0, ',', '.') }}
+                        Rp. {{ number_format($total, 0, ',', '.') }}
                     </td>
                 </tr>
             </tfoot>
@@ -378,5 +384,4 @@
         </div>
     </div>
 </div>
-
 @endsection

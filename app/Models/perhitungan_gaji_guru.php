@@ -30,6 +30,11 @@ class perhitungan_gaji_guru extends Model
         return $this->belongsTo(guru::class, 'id_guru', 'id');
     }
 
+    public function jenisPengeluaran()
+    {
+        return $this->belongsTo(jenis_pengeluaran::class, 'id_jenis_pengeluaran', 'id');
+    }
+
     public function getBulanNamaAttribute()
     {
         $bulanNames = [

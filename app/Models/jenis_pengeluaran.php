@@ -15,6 +15,7 @@ class jenis_pengeluaran extends Model
     protected $fillable = [
         'id_jenis_pengeluaran',
         'nama_jenis_pengeluaran',
+        'is_detail_khusus',
     ];
 
     public function perhitungan_gaji_guru()

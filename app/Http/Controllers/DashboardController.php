@@ -14,8 +14,7 @@ class DashboardController extends Controller
         $totalGajiGuru = perhitungan_gaji_guru::sum('total_gaji');
 
         // Total kas masuk
-        $totalKasMasuk = DB::table('pencatatan_kas')
-            ->where('jenis_transaksi', 'kas_masuk')
+        $totalKasMasuk = DB::table('pemasukan_dana')
             ->sum('jumlah');
 
         // Total kas keluar

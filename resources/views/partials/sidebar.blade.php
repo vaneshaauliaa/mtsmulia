@@ -448,6 +448,7 @@
                         'pengajuan_kas_keluar.index',
                         'pembelian_atk.index',
                         'perhitungan_gaji_guru.index',
+                        'biaya_operasional.*',
                     ];
                     $pengeluaranActive = request()->routeIs($pengeluaranRoutes);
                 @endphp
@@ -462,9 +463,8 @@
 
                     <ul class="nested-submenu" id="nested-pengeluaran">
                         <li>
-                            {{-- Ganti route ini jika sudah ada route khusus biaya operasional --}}
-                            <a href="{{ route('pengajuan_kas_keluar.index') }}"
-                               class="{{ request()->routeIs('pengajuan_kas_keluar.index') ? 'active' : '' }}">
+                            <a href="{{ route('biaya_operasional.index') }}"
+                               class="{{ request()->routeIs('biaya_operasional.*') ? 'active' : '' }}">
                                 Biaya Operasional
                             </a>
                         </li>
@@ -593,7 +593,7 @@
 
         // --- Auto-open: Nested Pengeluaran Dana ---
         const pengeluaranRoutes = [
-            'pengajuan_kas_keluar.', 'pembelian_atk.', 'perhitungan_gaji_guru.'
+            'pengajuan_kas_keluar.', 'pembelian_atk.', 'perhitungan_gaji_guru.', 'biaya_operasional.'
         ];
         if (pengeluaranRoutes.some(r => currentRoute.startsWith(r))) {
             document.getElementById('nested-pengeluaran').classList.add('show');

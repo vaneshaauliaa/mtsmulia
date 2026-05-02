@@ -51,6 +51,7 @@ Route::resource('/pengajuan_kas_keluar', PengajuanKasKeluarController::class);
 Route::resource('/perhitungan_gaji_guru', PerhitunganGajiGuruController::class);
 Route::resource('/pembelian_atk', PembelianAtkController::class);
 Route::resource('/pemasukan_dana', App\Http\Controllers\PemasukanDanaController::class);
+Route::resource('/biaya_operasional', App\Http\Controllers\BiayaOperasionalController::class);
 
 
 //laporan

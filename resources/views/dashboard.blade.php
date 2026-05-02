@@ -261,7 +261,7 @@
 {{-- WELCOME BANNER --}}
 <div class="welcome-banner">
     <div class="welcome-content">
-        <div class="welcome-title">👋 Selamat Datang, Admin!</div>
+        <div class="welcome-title">👋 Selamat Datang!</div>
         <div class="welcome-subtitle">
             {{ \Carbon\Carbon::now()->translatedFormat('l, d F Y') }} • 
             Sistem Informasi Keuangan MTs Mulia Insani
